@@ -13,4 +13,3 @@ config_version=5
 config/name="Calendar Addon"
 run/main_scene="res://demo/calendar_demo.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
