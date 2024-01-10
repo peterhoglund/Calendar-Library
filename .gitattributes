@@ -1,7 +1,7 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
 
-/project.godot export-ignore
+/addons/calendar_library/project.godot export-ignore
 /docs export-ignore
 /docs/calendar_library_front.png export-ignore
 /.gitattributes export-ignore
