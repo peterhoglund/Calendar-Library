@@ -1,7 +1,7 @@
 ## A resource to define localized names for weekdays and months
 ##
 ## CalendarLocale is used by [Calendar] to represent the correct
-## localized versions of weekday and month names. Cerate a new
+## localized versions of weekday and month names. Create a new
 ## CalendarLocale resource and set the localized names in the Inspector.
 ## You can assign a new CalendarLocale to any [Calendar] object.
 extends Resource

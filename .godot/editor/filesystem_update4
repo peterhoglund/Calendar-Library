@@ -1,2 +1,4 @@
 res://calendar_demo.tscn
 res://demo/calendar_demo.tscn
+res://calendar_locale.gd
+res://calendar.gd

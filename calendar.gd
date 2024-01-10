@@ -644,7 +644,7 @@ class Date:
 	
 	
 	## Returns [code]true[/code] or [code]false[/code]
-	## if the date is a valid date or not
+	## if the date is a valid date or not.
 	func is_valid() -> bool:
 		if month < 1 or month > 12:
 			return false
@@ -686,7 +686,7 @@ class Date:
 		return (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0))
 	
 	
-	## Returns true if this Date is before the provided date
+	## Returns [code]true[/code] if this Date is before the provided date.
 	func is_before(date: Date) -> bool:
 		if year < date.year:
 			return true
@@ -698,7 +698,7 @@ class Date:
 		return false
 	
 	
-	## Returns true if this Date is after the provided date
+	## Returns [code]true[/code] if this Date is after the provided date.
 	func is_after(date: Date) -> bool:
 		if year > date.year:
 			return true
@@ -710,7 +710,7 @@ class Date:
 		return false
 	
 	
-	## Returns true if this Date is the same as the provided date
+	## Returns [code]true[/code] if this Date is the same as the provided date.
 	func is_equal(date: Date) -> bool:
 		if year == date.year and month == date.month and day == date.day:
 			return true
@@ -741,6 +741,8 @@ class Date:
 		return (f + 6) % 7 as Time.Weekday
 	
 	
+	## Similar to [method get_weekday] but returns an integer value 
+	## where Monday = 1 and Sunday = 7, according to the ISO8601 standard.
 	func get_weekday_iso() -> int:
 		var weekday: Time.Weekday = get_weekday()
 		return weekday if weekday != 0 else 7
@@ -879,6 +881,12 @@ class Date:
 		return self._to_julian_day() - date._to_julian_day()
 	
 	
+	## A static function that returns a Date object with todays date.
+	## The date is fetched from the system.
+	## [codeblock]
+	## var todays_date = Calendar.Date.today()
+	## print(todays_date) # Outputs the current date from the system
+	## [/codeblock]
 	static func today() -> Date:
 		var date: Date = Date.new(1, 1, 1)
 		var today_date: Dictionary = Time.get_date_dict_from_system()
