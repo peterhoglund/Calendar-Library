@@ -1,0 +1,199 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt72ebrhuikpt"]
+
+[ext_resource type="Script" path="res://demo/calendar_demo.gd" id="1_qxlq3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_15vha"]
+font_size = 30
+font_color = Color(0.254902, 0.282353, 0.32549, 1)
+
+[node name="CalendarDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxlq3")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.14902, 0.176471, 1)
+
+[node name="Padding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CalendarComponents" type="HBoxContainer" parent="Padding"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="YearCalendarContainer" type="VBoxContainer" parent="Padding/CalendarComponents"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.57
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Padding/CalendarComponents/YearCalendarContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="YearMinus" type="Button" parent="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+text = "⬅"
+
+[node name="YearLabel" type="Label" parent="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "2024"
+label_settings = SubResource("LabelSettings_15vha")
+vertical_alignment = 2
+
+[node name="YearPlus" type="Button" parent="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+text = "⮕"
+
+[node name="DateLabel" type="Label" parent="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+vertical_alignment = 2
+
+[node name="YearCalendar" type="GridContainer" parent="Padding/CalendarComponents/YearCalendarContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 26
+columns = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Padding/CalendarComponents"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+
+[node name="Language" type="Label" parent="Padding/CalendarComponents/VBoxContainer"]
+layout_mode = 2
+text = "Demo languages"
+
+[node name="LanguageOptionButton" type="OptionButton" parent="Padding/CalendarComponents/VBoxContainer/Language"]
+layout_mode = 2
+offset_top = 27.0
+offset_right = 256.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Choose any of the available  demo languages."
+item_count = 4
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Spanish"
+popup/item_1/id = 1
+popup/item_2/text = "Simplified Chinese"
+popup/item_2/id = 2
+popup/item_3/text = "Swedish"
+popup/item_3/id = 3
+
+[node name="FirstWeekday" type="Label" parent="Padding/CalendarComponents/VBoxContainer"]
+layout_mode = 2
+text = "First weekday"
+
+[node name="FirstWeekdayOptionButton" type="OptionButton" parent="Padding/CalendarComponents/VBoxContainer/FirstWeekday"]
+layout_mode = 2
+offset_top = 27.0
+offset_right = 256.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Set the first weekday of the week."
+item_count = 7
+selected = 0
+popup/item_0/text = "Monday"
+popup/item_0/id = 0
+popup/item_1/text = "Tuesday"
+popup/item_1/id = 1
+popup/item_2/text = "Wednesday"
+popup/item_2/id = 2
+popup/item_3/text = "Thursday"
+popup/item_3/id = 3
+popup/item_4/text = "Friday"
+popup/item_4/id = 4
+popup/item_5/text = "Saturday"
+popup/item_5/id = 5
+popup/item_6/text = "Sunday"
+popup/item_6/id = 6
+
+[node name="WeekNumberSystem" type="Label" parent="Padding/CalendarComponents/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "Week Number System"
+
+[node name="WeekNumberSystemOptionButton" type="OptionButton" parent="Padding/CalendarComponents/VBoxContainer/WeekNumberSystem"]
+layout_mode = 2
+offset_top = 27.0
+offset_right = 256.0
+offset_bottom = 58.0
+tooltip_text = "Set how week numbers are calculated. 
+In code this is set by the WeekNumberSystem enum.
+First four day week (WEEK_NUMBER_FOUR_DAY)
+The first week of the year that have four days in it is considered to be week 1. 
+This is aligned with the ISO8601 standard.
+
+Traditional (WEEK_NUMBER_TRADITIONAL)
+The week with January 1 is always considered to be week 1."
+item_count = 2
+selected = 0
+popup/item_0/text = "First four day week"
+popup/item_0/id = 0
+popup/item_1/text = "Traditional"
+popup/item_1/id = 1
+
+[node name="WeekNumbersCheckButton" type="CheckButton" parent="Padding/CalendarComponents/VBoxContainer/WeekNumberSystem"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 256.0
+offset_bottom = 97.0
+button_pressed = true
+text = "Show week numbers"
+
+[node name="HSeparator" type="HSeparator" parent="Padding/CalendarComponents/VBoxContainer"]
+layout_mode = 2
+
+[node name="DatePicker" type="Button" parent="Padding/CalendarComponents/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+text = "Select date"
+alignment = 0
+
+[node name="PopupPanel" type="Panel" parent="Padding/CalendarComponents/VBoxContainer/DatePicker"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_top = 39.0
+offset_right = 266.0
+offset_bottom = 240.0
+grow_horizontal = 2
+
+[connection signal="pressed" from="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer/YearMinus" to="." method="_on_year_minus_pressed"]
+[connection signal="pressed" from="Padding/CalendarComponents/YearCalendarContainer/HBoxContainer/YearPlus" to="." method="_on_year_plus_pressed"]
+[connection signal="item_selected" from="Padding/CalendarComponents/VBoxContainer/Language/LanguageOptionButton" to="." method="_on_language_option_button_item_selected"]
+[connection signal="item_selected" from="Padding/CalendarComponents/VBoxContainer/FirstWeekday/FirstWeekdayOptionButton" to="." method="_on_first_weekday_option_button_item_selected"]
+[connection signal="item_selected" from="Padding/CalendarComponents/VBoxContainer/WeekNumberSystem/WeekNumberSystemOptionButton" to="." method="_on_week_number_system_option_button_item_selected"]
+[connection signal="toggled" from="Padding/CalendarComponents/VBoxContainer/WeekNumberSystem/WeekNumbersCheckButton" to="." method="_on_week_numbers_check_button_toggled"]
+[connection signal="toggled" from="Padding/CalendarComponents/VBoxContainer/DatePicker" to="." method="_on_date_picker_toggled"]

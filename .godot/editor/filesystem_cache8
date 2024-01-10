@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1704919879
+calendar.gd::GDScript::-1::1704919742::0::1::::Calendar<>RefCounted<>::
+calendar_demo.gd::GDScript::-1::1704919742::0::1::::<>Control<>::
+calendar_demo.tscn::PackedScene::3787715382056069721::1704919892::0::1::::<><>::res://calendar_demo.gd
+calendar_locale.gd::GDScript::-1::1704919742::0::1::::CalendarLocale<>Resource<>::
+calendar_locale_CN.tres::Resource/CalendarLocale::4206286448575685960::1704919742::0::1::::<><>::res://calendar_locale.gd
+calendar_locale_EN.tres::Resource/CalendarLocale::101201811265250262::1704919742::0::1::::<><>::res://calendar_locale.gd
+calendar_locale_ES.tres::Resource/CalendarLocale::2237919560193441496::1704919742::0::1::::<><>::res://calendar_locale.gd
+calendar_locale_SE.tres::Resource/CalendarLocale::7681016959923112112::1704919742::0::1::::<><>::res://calendar_locale.gd
+::res://demo/::1704919879
