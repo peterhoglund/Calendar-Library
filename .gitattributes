@@ -2,7 +2,8 @@
 * text=auto eol=lf
 
 /project.godot export-ignore
-/.DS_Store export-ignore
+/docs export-ignore
+/docs/calendar_library_front.png export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
 /.gdignore export-ignore
