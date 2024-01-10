@@ -8,3 +8,5 @@
 /.gitignore export-ignore
 /.godot export-ignore
 /.godot/* export-ignore
+/LICENSE export-ignore
+/README.md export-ignore
