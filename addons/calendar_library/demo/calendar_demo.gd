@@ -187,13 +187,13 @@ func _on_year_plus_pressed() -> void:
 func _on_language_option_button_item_selected(index: int) -> void:
 	match index:
 		0:
-			cal.set_calendar_locale("res://calendar_locale_EN.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_EN.tres")
 		1:
-			cal.set_calendar_locale("res://calendar_locale_ES.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_ES.tres")
 		2:
-			cal.set_calendar_locale("res://calendar_locale_CN.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_CN.tres")
 		3:
-			cal.set_calendar_locale("res://calendar_locale_SE.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_SE.tres")
 	
 	weekdays_formatted = cal.get_weekdays_formatted(Calendar.WeekdayFormat.WEEKDAY_FORMAT_SHORT)
 	months_formatted = cal.get_months_formatted(Calendar.MonthFormat.MONTH_FORMAT_FULL)
