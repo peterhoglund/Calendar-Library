@@ -27,4 +27,4 @@ CalendarLocale is used by Calendar objects to represent the correct localized ve
 
 
 ## Documentation
-Full documentation is supported in the editor through the Documentation Help section. Search for Calendar, Date and CalendarLocale.
+Full documentation is supported in the editor through the Documentation Help section. Search for Calendar, Calendar.Date and CalendarLocale.
