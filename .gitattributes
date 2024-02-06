@@ -4,4 +4,3 @@
 /**        export-ignore
 /addons    !export-ignore
 /addons/** !export-ignore
-/addons/calendar_library/project.godot export-ignore
