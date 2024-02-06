@@ -14,6 +14,7 @@ A resource to define localized names for weekdays and months
 
 CalendarLocale is used by Calendar objects to represent the correct localized versions of weekday and month names. All Calendar objects get a default English CalendarLocale assigned at creation. You can create a new CalendarLocale resource and set new localized names in the Inspector. You can assign a new CalendarLocale to any Calendar object.
 
+![Calendar Library](./docs/calendar_library_screen.png)
 
 ## Features
 - Generate full year, month and week calendars through simple functions.
