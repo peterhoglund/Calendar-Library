@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CalendarLocale" load_steps=2 format=3 uid="uid://bpa1qtu53hq1"]
 
-[ext_resource type="Script" path="res://calendar_locale.gd" id="1_hmqnd"]
+[ext_resource type="Script" path="res://addons/calendar_library/calendar_locale.gd" id="1_hmqnd"]
 
 [resource]
 script = ExtResource("1_hmqnd")
