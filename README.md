@@ -19,7 +19,7 @@ CalendarLocale is used by Calendar objects to represent the correct localized ve
 - Generate full year, month and week calendars through simple functions.
 - Supports variable start of the week (any weekday can be the first).
 - Supports week numbers with two versions - "First four day week" (where Week 1 is the first week with four days in it) and "Traditional" (where Week 1 is the week containing January 1).
-- Localization for day names and month names in three versions, Full (e.g. "Monday"), Abbreviation (e.g. "Mon") and Short (e.g. "M").
+- Localization for day names and month names in three versions, Full (e.g. "Monday", "January"), Abbreviation (e.g. "Mon", "Jan") and Short (e.g. "M", "J").
 - Customizable date format through POSIX placeholders (e.g. "%A, %-d %B" become "Wednesday, 21 October"). Supports any divider characters.
 - A Date class with functions for manipulating and comparing dates.
 
