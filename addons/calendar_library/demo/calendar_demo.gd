@@ -189,10 +189,12 @@ func _on_language_option_button_item_selected(index: int) -> void:
 		0:
 			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_EN.tres")
 		1:
-			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_ES.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_DE.tres")
 		2:
-			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_CN.tres")
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_ES.tres")
 		3:
+			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_CN.tres")
+		4:
 			cal.set_calendar_locale("res://addons/calendar_library/demo/calendar_locale_SE.tres")
 	
 	weekdays_formatted = cal.get_weekdays_formatted(Calendar.WeekdayFormat.WEEKDAY_FORMAT_SHORT)
