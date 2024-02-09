@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="CalendarLocale" load_steps=2 format=3 uid="uid://buyf0jni27t01"]
+[gd_resource type="Resource" script_class="CalendarLocale" load_steps=2 format=3 uid="uid://cjwh5pnuvbuwk"]
 
 [ext_resource type="Script" path="res://addons/calendar_library/calendar_locale.gd" id="1_hoxni"]
 
 [resource]
 script = ExtResource("1_hoxni")
+date_format = 1
+divider_symbol = "."
 monday = "Montag"
 tuesday = "Dienstag"
 wednesday = "Mittwoch"

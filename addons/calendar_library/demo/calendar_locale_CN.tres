@@ -4,6 +4,8 @@
 
 [resource]
 script = ExtResource("1_p64w5")
+date_format = 0
+divider_symbol = "-"
 monday = "星期一"
 tuesday = "星期二"
 wednesday = "星期三"

@@ -4,6 +4,8 @@
 
 [resource]
 script = ExtResource("1_hml7q")
+date_format = 0
+divider_symbol = "-"
 monday = "Måndag"
 tuesday = "Tisdag"
 wednesday = "Onsdag"

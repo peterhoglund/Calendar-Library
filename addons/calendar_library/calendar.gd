@@ -591,6 +591,29 @@ func get_date_formatted(year: int, month: int, day: int, format: String = "%Y-%m
 	return result
 
 
+## Returns the given [param year], [param month] and [param day] in the format specified 
+## by the current CalendarLocale's Date Format and Divider Symbol.
+## [br][br]
+## Set [param four_digit_year] to [code]false[/code] to get the year with two digits instead of four.
+func get_date_locale_format(year: int, month: int, day: int, four_digit_year: bool = true) -> String:
+	var year_format: String = "%Y" if four_digit_year else "%y"
+	var divider: String = calendar_locale.divider_symbol
+	var format: String = ""
+	
+	var date_format: String = "%s%s%s%s%s"
+	match calendar_locale.date_format:
+		0: # "Year-Month-Day"
+			format = date_format % [year_format, divider, "%m", divider, "%d"]
+		1: # "Day-Month-Year"
+			format = date_format % ["%d", divider, "%m", divider, year_format]
+		2: # "Month-Day-Year"
+			format = date_format % ["%m", divider, "%d", divider, year_format]
+		3: # "Year-Day-Month"
+			format = date_format % [year_format, divider, "%d", divider, "%m"]
+	
+	return get_date_formatted(year, month, day, format)
+
+
 @warning_ignore("integer_division")
 func _get_shifted_weekday(year: int, month: int , day: int) -> int:
 	# This Zeller's work a bit different than get_weekday()
