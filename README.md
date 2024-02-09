@@ -10,7 +10,7 @@ This is a code library for generating calendar data. A demo project is available
 
 
 ### CalendarLocale
-CalendarLocale is used by Calendar objects to represent the correct localized versions of weekday and month names. All Calendar objects get a default English CalendarLocale assigned at creation. You can create a new CalendarLocale resource and set new localized names in the Inspector. You can assign a new CalendarLocale to any Calendar object.
+CalendarLocale is used by Calendar objects to represent the correct localized versions of weekday and month names. All Calendar objects get a default English CalendarLocale assigned at creation. You can create a new CalendarLocale resource and set new localized names in the Inspector as well as the locale's standard Date Format. You can assign a new CalendarLocale to any Calendar object.
 
 
 ## Features
@@ -18,6 +18,7 @@ CalendarLocale is used by Calendar objects to represent the correct localized ve
 - Supports variable start of the week (any weekday can be the first).
 - Supports week numbers with two versions - "First four day week" (where Week 1 is the first week with four days in it) and "Traditional" (where Week 1 is the week containing January 1).
 - Localization for day names and month names in three versions, Full (e.g. "Monday", "January"), Abbreviation (e.g. "Mon", "Jan") and Short (e.g. "M", "J").
+- Standard date format for each locale.
 - Customizable date format through POSIX placeholders (e.g. "%A, %-d %B" become "Wednesday, 21 October"). Supports any divider characters.
 - A Date class with functions for manipulating and comparing dates.
 
