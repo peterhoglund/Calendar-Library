@@ -12,7 +12,7 @@ This is a code library for generating calendar data. A demo project is available
 ### CalendarLocale
 CalendarLocale is used by Calendar objects to represent the correct localized versions of weekday and month names. All Calendar objects get a default English CalendarLocale assigned at creation. You can create a new CalendarLocale resource and set new localized names in the Inspector as well as the locale's standard Date Format. You can assign a new CalendarLocale to any Calendar object.
 
-For each CalendarLocale you can also specify the standard data format for that locale and what divider symbol to use. For example Y/M/D or D-M-Y.
+For each CalendarLocale you can also specify the standard date format for that locale and what divider symbol to use. For example Y/M/D or D-M-Y.
 
 
 ## Features
