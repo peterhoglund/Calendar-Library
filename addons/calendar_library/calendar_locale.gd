@@ -7,7 +7,13 @@
 extends Resource
 class_name CalendarLocale
 
+## The standard date format for the locale.
+## Use Calendar's [method get_date_locale_format] to get a formatted string based on
+## this format.
 @export_enum("Year-Month-Day", "Day-Month-Year", "Month-Day-Year", "Year-Day-Month") var date_format := 0
+
+## Symbol dividing the year, month and day in Date Format, for example Y/M/D or D-M-Y.
+## Can be any character or characters.
 @export var divider_symbol := "-"
 
 @export_category("Weekday")
