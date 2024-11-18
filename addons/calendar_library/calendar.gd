@@ -566,9 +566,9 @@ func get_date_formatted(year: int, month: int, day: int, format: String = "%Y-%m
 		"%y": func(y, m, d): return str(y).right(2),
 		"%-y": func(y, m, d): return str(y).substr(-2, 2).replace("0", ""),
 		"%m": func(y, m, d): return str(m).pad_zeros(2),
-		"%-m": func(y, m, d): return str(m).replace("0", ""),
+		"%-m": func(y, m, d): return str(m).lstrip("0"),
 		"%d": func(y, m, d): return str(d).pad_zeros(2),
-		"%-d": func(y, m, d): return str(d).replace("0", ""),
+		"%-d": func(y, m, d): return str(d).lstrip("0"),
 		"%F": func(y, m, d): return "%s-%02d-%02d" % [year, month, day],
 		
 		"%B": func(y, m, d): return get_month_formatted(m, MonthFormat.MONTH_FORMAT_FULL),

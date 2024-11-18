@@ -98,11 +98,10 @@ offset_right = 256.0
 offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
-tooltip_text = "Choose any of the available  demo languages."
-item_count = 5
+tooltip_text = "Choose any of the available demo languages."
 selected = 0
+item_count = 5
 popup/item_0/text = "English"
-popup/item_0/id = 0
 popup/item_1/text = "German"
 popup/item_1/id = 1
 popup/item_2/text = "Spanish"
@@ -124,10 +123,9 @@ offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
 tooltip_text = "Set the first weekday of the week."
-item_count = 7
 selected = 0
+item_count = 7
 popup/item_0/text = "Monday"
-popup/item_0/id = 0
 popup/item_1/text = "Tuesday"
 popup/item_1/id = 1
 popup/item_2/text = "Wednesday"
@@ -159,10 +157,9 @@ This is aligned with the ISO8601 standard.
 
 Traditional (WEEK_NUMBER_TRADITIONAL)
 The week with January 1 is always considered to be week 1."
-item_count = 2
 selected = 0
+item_count = 2
 popup/item_0/text = "First four day week"
-popup/item_0/id = 0
 popup/item_1/text = "Traditional"
 popup/item_1/id = 1
 
